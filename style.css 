@@ -1,0 +1,38 @@
+
+.wrapper{
+  width:550px;
+  height:550px;
+  display:inline;
+  float:left;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom:20px;
+  margin-right:30px;
+}
+
+.wrapper img {
+  width:100%;
+}
+
+@media (max-width:991px) {
+  .col-xs-12{
+    height:50%;
+    overflow-y:scroll;
+    border-bottom:30px;
+    text-align:center;
+    color: white;
+  }
+  .wrapper{
+    width:40%;
+    height:40%;
+  }
+  .head{
+    position:fixed;
+    z-index:100;
+  }
+}
