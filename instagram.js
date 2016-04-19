@@ -38,22 +38,4 @@ $(function() {
 
 		}
 
-
-	var html = ""
-    var apiurl = "http://api.flickr.com/services/feeds/photos_public.gne?tags="+tag+"&tagmode=any&format=json&jsoncallback=?"
-    $(document).ready(function(){
-            console.log("document ready")
-            $.getJSON(apiurl,function(json){
-                console.log(json);
-                $.each(json.items,function(i,data){
-										style="url('"+data.media.m+"')";
-                    html += '<a target="_blank" href="'+data.link+'"><div class="wrapper" style="background-image:' + style + '"></div>'
-                    });
-                console.log(html);
-                $("#flResults").append(html);
-            });
-
-
-    });
-
 	})
