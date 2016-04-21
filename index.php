@@ -12,9 +12,9 @@
   <link href="style.css" rel="stylesheet">
   <style>
     html, body {
-      height: 50%;
-      margin: 30;
-      padding: 30;
+      height: 80%;
+      margin: 20;
+      padding: 10;
     }
     #map {
       height: 50%;
