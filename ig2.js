@@ -1,3 +1,4 @@
+96 lines (68 sloc)  2.86 KB
 // JavaScript Document
 
 
@@ -10,23 +11,20 @@
 
 $(function() {
 
-	var tag= "wearenotthis";
-
-	var apiurl = "https://api.instagram.com/v1/tags/"+tag+"/media/recent?access_token=248660894.aee21ef.0cb44e17e81547ef994d0de5ff989bbc&callback=?"
-	var access_token = location.hash.split('=')[1];
+	var apiurl = "https://api.instagram.com/v1/tags/grandcanyon/media/recent?access_token=248660894.aee21ef.0cb44e17e81547ef994d0de5ff989bbc&callback=?"
 	var insta = ""
+	var access_token = location.hash.split('=')[1];
 
-	$.ajax({
+		$.ajax({
 			type: "GET",
 			dataType: "json",
 			cache: false,
 			url: apiurl,
-			success: IGparseData
+			success: parseData
 		});
 
 
-
-		function IGparseData(json){
+		function parseData(json){
 			console.log(json);
 
 			var i = 0;
@@ -35,45 +33,57 @@ $(function() {
 				var date = new Date(data.created_time * 1000);
 				var day = date.getDay();
 
-				insta += '<div class="instagram-loop">'
+//				calculates the time since the tweet was created
 
+				//loop
+						insta += '<div class="instagram-loop">'
+						//
+						////row
 						insta += '<div class="row">'
+						//
+							////user information and user name
 							insta += '<div class="col-md-2">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
-							insta += '<img width="30px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
-
+							insta += '<img width="40px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
+							//new data
+							//insta += data.locations.location_id
 							insta += '</div>'
 							insta += '<div class="col-md-10">'
-							style="url('"+data.images.low_resolution.url+"')";
-							insta += '<a target="_blank" href="'+data.link+'"><div class="wrapper" style="background-image:' + style + '"></div></a>'
 							insta += '<p class="instagram-username">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
 							//end new data
 							insta += '<br></a></div>'
-							insta += '<div class="instagram-date-div">'
+							//
+						//
+						////date
+						insta += '<div class="instagram-date-div">'
 
-													insta += '</div>'
+						insta += '</div>'
+						//
+						////end row
+						insta += '</div>'
+						//
+						////image and link
+						insta += '<a target="_blank" href="' + data.link + '">'
+						insta += '<img width="100%" class="instagram-image" src ="' + data.images.low_resolution.url + '">'
+						insta += '</a>'
 
-													insta += '</div>'
-
-
+						////likes and caption
 						insta += '<div class="instagram-caption-div">'
+						insta += '<div class="instagram-likes"><img class="heart" src="img/insta-heart.png" alt="instagram heart"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
 						insta += '<span class="instagram-username-caption">'
 						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span'
-						insta += '<div class="instagram-likes"><img class="heart" src="instalink.png" alt="instalink"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
-
-						insta += '</div>'
+						//insta += '<div class="hashtags">' + data.caption.text + '</div>'
 						insta += '</div>'
 
+						////end of loop
+						insta += '</div>'
 
-			});
-
-
-
+				});
 
 			console.log(insta);
-			$("#results").append(insta);
+			$('#instagram').append(insta);
 
 		}
 
-	})
+ });

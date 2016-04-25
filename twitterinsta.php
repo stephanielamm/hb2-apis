@@ -1,4 +1,3 @@
-
 <html>
 <head>
   <meta name="viewport" content="initial-scale=1.0">
@@ -44,32 +43,26 @@
         <?php
         ini_set('display_errors', 1);
         require_once('TwitterAPIExchange.php');
-
         /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
         $settings = array(
             'oauth_access_token' => "1968176760-FT4k4xYAiacrn1LSSIM1qt8ye3j4keuTxOqtiq4",
             'oauth_access_token_secret' => "WBlbTTYQ9ptvSiuDeTW7rQPkG93hD2syFrBYTIohe9uSV",
             'consumer_key' => "6Q98Cp8LsAE2tOxvrWR8apZOU",
             'consumer_secret' => "Yh5Fzv8PDajC68uwUSvjWLa3cwaHof1tvxTKex8uKj4mSurZOB"
-
         );
-
         /** URL for REST request, see: https://dev.twitter.com/docs/api/1.1/ **/
         $url = 'https://api.twitter.com/1.1/blocks/create.json';
         $requestMethod = 'POST';
-
         /** POST fields required by the URL above. See relevant docs as above **/
         $postfields = array(
             'screen_name' => 'usernameToBlock',
             'skip_status' => '1'
         );
-
         /** Perform a POST request and echo the response **/
         // $twitter = new TwitterAPIExchange($settings);
         // echo $twitter->buildOauth($url, $requestMethod)
         //              ->setPostfields($postfields)
         //              ->performRequest();
-
         /** Perform a GET request and echo the response **/
         /** Note: Set the GET field BEFORE calling buildOauth(); **/
         $url = 'https://api.twitter.com/1.1/search/tweets.json';
@@ -79,32 +72,23 @@
         // echo $twitter->setGetfield($getfield)
         //              ->buildOauth($url, $requestMethod)
         //              ->performRequest();
-
         $tweetData = json_decode($twitter->setGetfield($getfield)
                         ->buildOauth($url, $requestMethod)
                         ->performRequest(),$assoc = True);
         $tweetMedia = array();
-
         foreach($tweetData['statuses'] as $index => $items)
         {
-
-
           echo "<div class='row twitter-info'>";
           echo "<div class='col-xs-2'><a href='http://twitter.com/" . $items['user']['screen_name'] . "' target='_blank'><img class='twitter-profilepictures' src='" . $items['user']['profile_image_url'] . "'/></a></div>";
           echo "<div class='col-xs-10 tweet-info'><span class='twitter-name'>" . $items['user']['name'] . " </span>";
           echo "<span class='twitter-username'>@" . $items['user']['screen_name'];
           echo "</span><p class='tweet'>" . $items['text'] . "</p></div></div>";
-
-
           $entitiesArray = $items['entities'];
                         if (isset($entitiesArray['media'])) {
-
                             $mediaArray = $entitiesArray['media'];
                             $tweetMedia = $mediaArray [0];
                             echo "<a target='_blank' href='" . $tweetMedia['expanded_url'] . "'><img class='twitter-pic' target='_blank' src='" . $tweetMedia['media_url'] . "'></a>";
                           }
-
-
         }
         ?>
       </div>
