@@ -39,7 +39,7 @@ $(function() {
 
 				//profile picture and username section
 						insta += '<div class="row">'
-							insta += '<div class="col-md-12">'
+							insta += '<div class="col-md-12" style="padding-bottom:20px">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
 							insta += '<img width="30px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
 							insta += '<p class="instagram-username">'

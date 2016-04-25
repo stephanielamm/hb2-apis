@@ -105,7 +105,7 @@
     </div>
 
 
-    <div class="row footer">This is the footer space
+    <div class="row footer">
     </div>
 
   </div>
