@@ -93,8 +93,11 @@
         ?>
       </div>
 
+      <div class="col-xs-1">
 
-      <div class="col-xs-7">
+      </div>
+
+      <div class="col-xs-6">
         <div class="head"><span style="">Instagram</span></div>
         <div id="results"></div>
       </div>
