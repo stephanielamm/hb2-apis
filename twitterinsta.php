@@ -1,4 +1,4 @@
-tw
+
 <html>
 <head>
   <meta name="viewport" content="initial-scale=1.0">
@@ -10,6 +10,13 @@ tw
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 10;
+      padding: 10;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,9 +26,9 @@ tw
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="news.html">In the news</a></li>
-      <li><a href="twitterinsta.php">See what people are saying</a></li>
+      <li class="active"><a href="twitterinsta.php">See what people are saying</a></li>
       <li><a href="video.html">Who opposes HB2?</a></li>
       <li><a href="map.html">Anti-LGBT legislation across the country</a></li>
     </ul>
@@ -33,7 +40,7 @@ tw
 
 
 
-      <div class="col-xs-6">Twitter
+      <div class="col-xs-5">Twitter
         <?php
         ini_set('display_errors', 1);
         require_once('TwitterAPIExchange.php');
@@ -76,14 +83,26 @@ tw
         $tweetData = json_decode($twitter->setGetfield($getfield)
                         ->buildOauth($url, $requestMethod)
                         ->performRequest(),$assoc = True);
+        $tweetMedia = array();
 
         foreach($tweetData['statuses'] as $index => $items)
         {
 
 
-          echo "<div class='twitter-tweet'>Tweet:" . $items['text'] . "'</div></br>'";
-          echo "When: " . $items['created_at'] . "</br>";
-          echo "Where: " .$items['location']. "</br>";
+          echo "<div class='row twitter-info'>";
+          echo "<div class='col-xs-2'><a href='http://twitter.com/" . $items['user']['screen_name'] . "' target='_blank'><img class='twitter-profilepictures' src='" . $items['user']['profile_image_url'] . "'/></a></div>";
+          echo "<div class='col-xs-10 tweet-info'><span class='twitter-name'>" . $items['user']['name'] . " </span>";
+          echo "<span class='twitter-username'>@" . $items['user']['screen_name'];
+          echo "</span><p class='tweet'>" . $items['text'] . "</p></div></div>";
+
+
+          $entitiesArray = $items['entities'];
+                        if (isset($entitiesArray['media'])) {
+
+                            $mediaArray = $entitiesArray['media'];
+                            $tweetMedia = $mediaArray [0];
+                            echo "<a target='_blank' href='" . $tweetMedia['expanded_url'] . "'><img class='twitter-pic' target='_blank' src='" . $tweetMedia['media_url'] . "'></a>";
+                          }
 
 
         }
@@ -91,7 +110,7 @@ tw
       </div>
 
 
-      <div class="col-xs-6">
+      <div class="col-xs-7">
         <div class="head"><span style="">Instagram</span></div>
         <div id="results"></div>
       </div>
