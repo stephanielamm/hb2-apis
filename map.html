@@ -16,7 +16,7 @@
       padding: 10;
     }
     #map {
-      height: 90%;
+      height: 60%;
     }
   </style>
 </head>
@@ -36,7 +36,11 @@
   </div>
   </nav>
 
-
+<div class="row">
+  <div class="col-xs-12">
+    <h3>This map shows states where anti-trans legislation has been introduced. This data is collected and updated regularly by the National Center for Transgender Equality.  </h3>
+  </div>
+</div>
     <div class="row">
     <div id="map" class="col-xs-12">
     <script>
@@ -90,11 +94,11 @@
          var hawaiiInfo = '<div id="content">'+
              '<div id="siteNotice">'+
              '</div>'+
-             '<h1 id="firstHeading" class="firstHeading">House Bill 2181</h1>'+
+             '<h4 id="firstHeading" class="firstHeading">House Bill 2181</h4>'+
              '<div id="bodyContent">'+
              '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to move out of committee.</p>'+
              '</div>'+
-             '<h1 id="firstHeading" class="firstHeading">House Bill 2532</h1>'+
+             '<h4 id="firstHeading" class="firstHeading">House Bill 2532</h4>'+
              '<div id="bodyContent">'+
              '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to move out of committee.</p>'+
              '</div>'+
@@ -104,8 +108,11 @@
              content: hawaiiInfo,
              position: hawaii,
            });
-     hwmarker.addListener('click', function() {
+     hwmarker.addListener('mousedown', function() {
          hwinfowindow.open(map, hwmarker);
+         });
+     hwmarker.addListener('onblur',function() {
+       hwinfowindow.close(map, hwmarker);
          });
 
 
@@ -118,7 +125,7 @@ var ilmarker = new google.maps.Marker({
    var illinoisInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 4474</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 4474</h4>'+
        '<div id="bodyContent">'+
        '<p> Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth, and requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Failed to move out of committee.</p>'+
        '</div>'+
@@ -129,9 +136,12 @@ var ilinfowindow = new google.maps.InfoWindow({
        content: illinoisInfo,
        position: illinois,
      });
-ilmarker.addListener('click', function() {
+ilmarker.addListener('mousedown', function() {
    ilinfowindow.open(map, ilmarker);
    });
+   ilmarker.addListener('mousedown',function() {
+     ilinfowindow.close(map, ilmarker);
+       });
 
 //Indiana//
 var indmarker = new google.maps.Marker({
@@ -142,11 +152,11 @@ var indmarker = new google.maps.Marker({
    var indianaInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1079</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1079</h4>'+
        '<div id="bodyContent">'+
        '<p>Makes it a class B misdemeanor (a crime) for anyone above age 10 to use a restroom that does not match their sex assigned at birth. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 35</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 35</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth, and requires schools to segregate all multi-user facilities by sex. Makes it a class A misdemeanor (a crime) for an adult to use single-sex facilities that does not match their sex assigned at birth in public buildings. Status: Failed to move out of committee.</p>'+
        '</div>'+
@@ -156,7 +166,7 @@ var indinfowindow = new google.maps.InfoWindow({
        content: indianaInfo,
        position: indiana,
      });
-indmarker.addListener('click', function() {
+indmarker.addListener('mousedown', function() {
    indinfowindow.open(map, indmarker);
    });
 
@@ -169,11 +179,11 @@ var ksmarker = new google.maps.Marker({
    var kansasInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2737</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2737</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires K-12 and postsecondary students to use single-sex facilities (like restrooms and locker rooms) according to their sex assigned at birth. Any student who runs into a trans person in a restroom or locker room can sue the school for $2500 for each time they saw the trans person there. Status: Referred to Committee on Federal and State Affairs.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 513</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 513</h4>'+
        '<div id="bodyContent">'+
        '<p> Requires K-12 and postsecondary students to use single-sex facilities (like restrooms and locker rooms) according to their sex assigned at birth. Any student who runs into a trans person in a restroom or locker room can sue the school for $2500 for each time they saw the trans person there. Status: Referred to Committee on Education.</p>'+
        '</div>'+
@@ -183,7 +193,7 @@ var ksinfowindow = new google.maps.InfoWindow({
        content: kansasInfo,
        position: kansas,
      });
-ksmarker.addListener('click', function() {
+ksmarker.addListener('mousedown', function() {
    ksinfowindow.open(map, ksmarker);
    });
 
@@ -197,7 +207,7 @@ var kymarker = new google.maps.Marker({
    var kyInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 364</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 364</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth. Statuts: Failed to move out of committee.</p>'+
        '</div>'+
@@ -208,7 +218,7 @@ var kyinfowindow = new google.maps.InfoWindow({
        content: kyInfo,
        position: kentucky,
      });
-kymarker.addListener('click', function() {
+kymarker.addListener('mousedown', function() {
    kyinfowindow.open(map, kymarker);
    });
 
@@ -222,7 +232,7 @@ var msmarker = new google.maps.Marker({
    var msInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1320</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1320</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires people to access single-sex facilities (like restrooms, changing rooms and living accommodations) and educational, athletic and therapeutic programs according to their “anatomical sex.” Status: Referred to Joint Committee on the Judiciary.</p>'+
        '</div>'+
@@ -231,7 +241,7 @@ var msinfowindow = new google.maps.InfoWindow({
        content: msInfo,
        position: massachusetts,
      });
-msmarker.addListener('click', function() {
+msmarker.addListener('mousedown', function() {
    msinfowindow.open(map, msmarker);
    });
 //michigan//
@@ -243,7 +253,7 @@ var mimarker = new google.maps.Marker({
    var miInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Resolution 0264</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Resolution 0264</h4>'+
        '<div id="bodyContent">'+
        '<p>Urges the State Board of Education to reject their proposed guidance on making LGBTQ students safe and supported. Status: Referred to the House Education Committee.</p>'+
        '</div>'+
@@ -252,7 +262,7 @@ var miinfowindow = new google.maps.InfoWindow({
        content: miInfo,
        position: michigan,
      });
-mimarker.addListener('click', function() {
+mimarker.addListener('mousedown', function() {
    miinfowindow.open(map, mimarker);
    });
 
@@ -265,11 +275,11 @@ var minmarker = new google.maps.Marker({
    var minInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House File 3396</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House File 3396</h4>'+
        '<div id="bodyContent">'+
        '<p>Status: Inactive.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House File 3002</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House File 3002</h4>'+
        '<div id="bodyContent">'+
        '<p>Status: Inactive.</p>'+
        '</div>'+
@@ -278,7 +288,7 @@ var mininfowindow = new google.maps.InfoWindow({
        content: minInfo,
        position: minnesota,
      });
-minmarker.addListener('click', function() {
+minmarker.addListener('mousedown', function() {
    mininfowindow.open(map, minmarker);
    });
 
@@ -291,11 +301,11 @@ var mismarker = new google.maps.Marker({
    var misInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1258</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1258</h4>'+
        '<div id="bodyContent">'+
        '<p>Status: Inactive.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1523</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1523</h4>'+
        '<div id="bodyContent">'+
        '<p> Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Signed into law.</p>'+
        '</div>'+
@@ -304,7 +314,7 @@ var misinfowindow = new google.maps.InfoWindow({
        content: misInfo,
        position: mississippi,
      });
-mismarker.addListener('click', function() {
+mismarker.addListener('mousedown', function() {
    misinfowindow.open(map, mismarker);
    });
 //missouri//
@@ -316,19 +326,19 @@ var momarker = new google.maps.Marker({
    var moInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1624</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1624</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth (unless they get permission by the school’s superintendent) and requires schools to segregate all multi-user facilities by sex. Status: Introduced but not yet assigned to committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1847</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1847</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires all public restrooms (except for single-stall restrooms) to be segregated by gender. Status: Introduced but not yet assigned to committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2303</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2303</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth. Allows some trans students to use empty single-sex facilities when accompanied by a school administrator. Status: Introduced but not yet assigned to committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 720</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 720</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires schools to make all multi-user facilities male-only or female-only, and requires students to use single-sex facilities according to their sex assigned at birth. Creates restrictions on when trans students can use single-user restrooms. Status: Referred to the Senate Education Committee.</p>'+
        '</div>'+
@@ -337,7 +347,7 @@ var moinfowindow = new google.maps.InfoWindow({
        content: moInfo,
        position: missouri,
      });
-momarker.addListener('click', function() {
+momarker.addListener('mousedown', function() {
    moinfowindow.open(map, momarker);
  });
 
@@ -350,7 +360,7 @@ var ncmarker = new google.maps.Marker({
    var ncInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2</h4>'+
        '<div id="bodyContent">'+
        '<p>Require schools and public buildings to segregate facilities according to sex marked on birth certificates. Prohibits local governments from passing ordinances on discrimination in public accommodations. Status: The governor has signed the bill into law.</p>'+
        '</div>'+
@@ -359,7 +369,7 @@ var ncinfowindow = new google.maps.InfoWindow({
        content: ncInfo,
        position: northCarolina,
      });
-ncmarker.addListener('click', function() {
+ncmarker.addListener('mousedown', function() {
    ncinfowindow.open(map, ncmarker);
    });
 //oklahoma//
@@ -371,27 +381,27 @@ var okmarker = new google.maps.Marker({
    var okInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1597</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1597</h4>'+
        '<div id="bodyContent">'+
        '<p>Gives businesses a blank check to discriminate against LGBT people for any reason. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2215</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2215</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires marriage applicants to state on their application whether they have had transition-related surgery and have it recorded on their marriage license. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 3049</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 3049</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use restrooms and locker rooms according to their sex assigned at birth (based on "physical difference" or chromosomes). Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 440</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 440</h4>'+
        '<div id="bodyContent">'+
        '<p> Creates sweeping exemptions for businesses and organizations to discriminate based on their religious beliefs about "sex, gender or sexual orientation." Statuts: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 1014</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 1014</h4>'+
        '<div id="bodyContent">'+
        '<p>Makes it illegal for people to use restrooms that don’t match their “biological gender.” Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 1323</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 1323</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires sex-specific student facilities to be segregated according to anatomy at birth, and withholds State Aid funds from schools that have sex-specific facilities and do not respond to a complaint by a parent or student according to the bill requirements. Statuts: Failed to move out of committee.</p>'+
        '</div>'+
@@ -400,7 +410,7 @@ var okinfowindow = new google.maps.InfoWindow({
        content: okInfo,
        position: oklahoma,
      });
-okmarker.addListener('click', function() {
+okmarker.addListener('mousedown', function() {
    okinfowindow.open(map, okmarker);
    });
 //oregon//
@@ -412,7 +422,7 @@ var ormarker = new google.maps.Marker({
    var orInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 4061</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 4061</h4>'+
        '<div id="bodyContent">'+
        '<p>Status: Inactive.</p>'+
        '</div>'+
@@ -423,7 +433,7 @@ var orinfowindow = new google.maps.InfoWindow({
        content: orInfo,
        position: oregon,
      });
-ormarker.addListener('click', function() {
+ormarker.addListener('mousedown', function() {
    orinfowindow.open(map, ormarker);
    });
 
@@ -436,15 +446,15 @@ var scmarker = new google.maps.Marker({
    var scInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 4761</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 4761</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to participate in sports teams according to the sex marked on their birth certificate. Status: Referred to Committee on Education and Public Works.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 0108</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 0108</h4>'+
        '<div id="bodyContent">'+
        '<p>Denies transgender people in prisons access to medically necessary transition-related care. Status: Introduced but has not moved since last year.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 1203</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 1203</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires people to use restrooms in schools and other buildings on public property according to their sex assigned at birth and prohibits local governments from adopting different policies. Status: Referred to General Senate Committee. A subcommittee held a hearing on April 13 and 14 and will send the bill to the full committee soon. Watch the powerful testimony from the subcommittee hearing.</p>'+
        '</div>'+
@@ -454,7 +464,7 @@ var scinfowindow = new google.maps.InfoWindow({
        content: scInfo,
        position: southCarolina,
      });
-scmarker.addListener('click', function() {
+scmarker.addListener('mousedown', function() {
    scinfowindow.open(map, scmarker);
    });
 //southDakota//
@@ -466,19 +476,19 @@ var sdmarker = new google.maps.Marker({
    var sdInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1008</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1008</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth and requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms.Status: Governor vetoed bill after it passed in the legislature. Legislators in the House failed to override the veto.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1107</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1107</h4>'+
        '<div id="bodyContent">'+
        '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to move out of commitee in the Senate after passing in the House.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1112</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1112</h4>'+
        '<div id="bodyContent">'+
        '<p>Overturns policy by the South Dakota High School Activities Association that required sports team to treat students according to their gender identity, and requires the Association to get consent from the state legislature before adopting any policies related to trans students. Status: Failed to move forward in the Senate after being passed in the House.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 1209</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 1209</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires schools and other public bodies to accept all the information on birth certificates as valid, including the name and gender listed there. Status: Failed to move out of committee.</p>'+
        '</div>'+
@@ -488,7 +498,7 @@ var sdinfowindow = new google.maps.InfoWindow({
        content: sdInfo,
        position: southDakota,
      });
-sdmarker.addListener('click', function() {
+sdmarker.addListener('mousedown', function() {
    sdinfowindow.open(map, sdmarker);
    });
 //tennessee//
@@ -500,19 +510,19 @@ var tnmarker = new google.maps.Marker({
    var tnInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2414</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2414</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students in public schools, including public colleges and universities, to use restrooms and locker rooms according to their sex assigned at birth. Status: Sponsor withdrew bill.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2600</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2600</h4>'+
        '<div id="bodyContent">'+
        '<p>Voids any vital record documents, like marriage licenses and birth certificates, if they have a gender marker that doesn’t match a person’s sex assigned at birth. Status: Failed to move before the legislature adjourned.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 2275</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 2275</h4>'+
        '<div id="bodyContent">'+
        '<p>Voids any vital record documents, like marriage licenses and birth certificates, if they have a gender marker that doesn’t match a person’s sex assigned at birth. Status: Failed to move before the legislature adjourned.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 2387</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 2387</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students in public schools, including public colleges and universities, to use restrooms and locker rooms according to their sex assigned at birth. Status: Failed to move before the legislature adjourned.</p>'+
        '</div>'+
@@ -522,7 +532,7 @@ var tninfowindow = new google.maps.InfoWindow({
        content: tnInfo,
        position: tennessee,
      });
-tnmarker.addListener('click', function() {
+tnmarker.addListener('mousedown', function() {
    tninfowindow.open(map, tnmarker);
    });
 //virginia//
@@ -534,23 +544,23 @@ var vamarker = new google.maps.Marker({
    var vaInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 77</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 77</h4>'+
        '<div id="bodyContent">'+
        '<p>Says that violations of federal sex discrimination regulations, policies and rules adopted since 2012 are not violations of the Virginia Human Rights Act. This is a clever way of saying that the sex discrimination law in Virginia can’t be interpreted to cover LGBT people, like federal sex discrimination laws have been interpreted to do so by the Obama administration. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 397</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 397</h4>'+
        '<div id="bodyContent">'+
        '<p>Excludes discrimination based on gender identity from sex discrimination protections under the Human Rights Act. Forbids local governments and school districts from adopting more protective sex discrimination policies. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 431</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 431</h4>'+
        '<div id="bodyContent">'+
        '<p>Takes away trans’ people ability to change the gender on their birth certificates. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 663</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 663</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth and imposes a fine for violation. Requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 781</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 781</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth and imposes a fine for violation. Requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Bill defeated in committee.</p>'+
        '</div>'+
@@ -560,7 +570,7 @@ var vainfowindow = new google.maps.InfoWindow({
        content: vaInfo,
        position: virginia,
      });
-vamarker.addListener('click', function() {
+vamarker.addListener('mousedown', function() {
    vainfowindow.open(map, vamarker);
    });
 //washington//
@@ -572,27 +582,27 @@ var wamarker = new google.maps.Marker({
    var waInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2589</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2589</h4>'+
        '<div id="bodyContent">'+
        '<p>Amends the state’s nondiscrimination law to away trans’ people ability to use single-sex facilities according to gender identity. Allows private and public entities to bar people from single-sex facilities based on their anatomy. Status: Failed to meet deadline for introducing new bills.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2782</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2782</h4>'+
        '<div id="bodyContent">'+
        '<p>Amends the state’s nondiscrimination law to say that it does not give people the right to use facilities that are inconsistent with their anatomy or DNA. Status: Failed to move out of committee.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2935</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2935</h4>'+
        '<div id="bodyContent">'+
        '<p>Repeals a regulation that allows trans people to access facilities according to their gender identity and forbids the Washington Human Rights Commission from making any more regulations about access to single-sex facilities. Status: Failed to move forward.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 2941</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 2941</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use restrooms according to sex assigned at birth. Status: Failed to move forward.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 6443</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 6443</h4>'+
        '<div id="bodyContent">'+
        '<p>Repeals a regulation that allows trans people to access facilities according to their gender identity and forbids the Washington Human Rights Commission from making any more regulations about access to single-sex facilities. Status: Defeated on the Senate floor.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 6584</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 6584</h4>'+
        '<div id="bodyContent">'+
        '<p>Amends the state’s nondiscrimination law to away trans’ people ability to use single-sex facilities according to gender identity. Allows private and public entities to bar people from single-sex facilities based on their anatomy. Status: Failed to move out of Senate Rules committee.</p>'+
        '</div>'+
@@ -602,7 +612,7 @@ var wainfowindow = new google.maps.InfoWindow({
        content: waInfo,
        position: washington,
      });
-wamarker.addListener('click', function() {
+wamarker.addListener('mousedown', function() {
    wainfowindow.open(map, wamarker);
    });
 //wisconsin//
@@ -614,11 +624,11 @@ var wimarker = new google.maps.Marker({
    var wiInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Assembly Bill 469</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Assembly Bill 469</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth, and requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Failed to move forward.</p>'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">Senate Bill 582</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">Senate Bill 582</h4>'+
        '<div id="bodyContent">'+
        '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth. Status: Failed to move forward.</p>'+
        '</div>'+
@@ -628,7 +638,7 @@ var wiinfowindow = new google.maps.InfoWindow({
        content: wiInfo,
        position: wisconsin,
      });
-wimarker.addListener('click', function() {
+wimarker.addListener('mousedown', function() {
    wiinfowindow.open(map, wimarker);
    });
 
@@ -642,7 +652,7 @@ var wymarker = new google.maps.Marker({
    var wyInfo = '<div id="content">'+
        '<div id="siteNotice">'+
        '</div>'+
-       '<h1 id="firstHeading" class="firstHeading">House Bill 98</h1>'+
+       '<h4 id="firstHeading" class="firstHeading">House Bill 98</h4>'+
        '<div id="bodyContent">'+
        '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to meet deadline for introducing new bills.</p>'+
        '</div>'+
@@ -652,7 +662,7 @@ var wyinfowindow = new google.maps.InfoWindow({
        content: wyInfo,
        position: wyoming,
      });
-wymarker.addListener('click', function() {
+wymarker.addListener('mousedown', function() {
    wyinfowindow.open(map, wymarker);
    });
 
