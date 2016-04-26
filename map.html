@@ -16,7 +16,7 @@
       padding: 10;
     }
     #map {
-      height: 100%;
+      height: 90%;
     }
   </style>
 </head>
@@ -42,12 +42,92 @@
     <div class="row">
     <div id="map" class="col-xs-12">
     <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 39.8282, lng: -98.5795},
-          zoom: 4
-        });
+    $(document).ready(function(){
+      initMap();
+
+                });
+
+     function initMap() {
+
+       var map;
+       var center = {lat: 39.8282, lng: -98.5795};
+
+//points
+          var hawaii = {lat:19.8968, lng: -155.58};
+          var illinois = {lat:40.6331, lng: -89.3985};
+          var indiana = {lat: 40.2672, lng: -86.1349};
+          var kansas = {lat: 39.0119, lng: -98.4842;
+          var kentucky = {lat:37.8393, lng: -84.2700};
+          var massachusetts = {lat:42.4072, lng: -71.3824};
+          var michigan = {lat: 44.3148, lng:-85.6024};
+          var minnesota = {lat:46.7296, lng: -94.6859};
+          var mississippi = {lat:32.3547, lng: -89.3985};
+          var missouri = {lat: 37.9643, lng: -91.8318};
+          var northCarolina = {lat: 35.7596, lng: -79.0193};
+          var oklahoma = {lat:35.0078, lng: -97.0929};
+          var oregon = {lat:43.8041, lng: -120.5542};
+          var southCarolina = {lat: 33.8361, lng:-81.1637};
+          var southDakota = {lat: 43.9695, lng:-99.9018};
+          var tennessee = {lat:35.5175, lng: -86.5804};
+          var virginia = {lat:37.4316, lng: -78.6569};
+          var washington = {lat: 38.9072, lng: -77.0369};
+          var wisconsin = {lat: 43.7844, lng: -88.7879};
+          var wyoming = {lat:43.0760, lng: -107.2903};
+
+
+           map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 39.8282, lng: -98.5795};,
+                    zoom: 4,
+                    mapTypeId: google.maps.MapTypeId.SATELLITE,
+                    scrollwheel:false
+
+                  });
+
+//Hawaii//
+      var marker = new google.maps.Marker({
+           position: yavPoint,
+           map: map,
+           title: 'Hawaii'
+         });
+         var mathString = '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading">Mather Point</h1>'+
+             '<div id="bodyContent">'+
+             '<p>Mather Point was named after Stephen Mather, the first director of the National Parks Service.  Looking towards the North Rim, viewers can see for 10 miles across to the other side from Mather Point</p>'+
+             '</div>'+
+             '</div>';
+
+     var infowindow = new google.maps.InfoWindow({
+             content: mathString,
+             position: mathPoint,
+           });
+     marker.addListener('click', function() {
+         infowindow.open(map, marker);
+         });
+//Illinois//
+//Indiana//
+//kansas//
+//kentucky//
+//massachusetts//
+//michigan//
+//minnesota//
+//mississippi//
+//missouri//
+//northCarolina//
+//oklahoma//
+//oregon//
+//southCarolina//
+//southDakota//
+//tennessee//
+//virginia//
+//washington//
+//wisconsin//
+//wyoming//
+
+
+
+
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJTGfgRzYN1jJhpYcOaJnSUkSF234psEA&callback=initMap"

@@ -41,15 +41,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-              <h1 class="nav-item insta">Insta</h1>
-              <h1 class="nav-item twitter">Twitter</h1>
+            <button type="button" class="btn btn-secondary btn-lg nav-item insta" data-toggle="button" aria-pressed="false" autocomplete="off">Instagram</button>
+          </br></br>
+            <button type="button" class="btn btn-secondary btn-lg nav-item twitter" data-toggle="button" aria-pressed="false" autocomplete="off">Twitter</button>
       </div>
+
       <div class="col-sm-10">
       <div class="home-expand">
         <div class="container">
           <div class="row">
             <div class="col-sm-10">
-          <p>HOME TEXT</p>
+          <p></p>
         </div>
       </div>
     </div>
@@ -59,7 +61,7 @@
         <div class="insta-expand">
           <div class="container">
             <div class="row">
-              <div class="col-sm-10">
+              <div class="col-sm-10" style="background-color:#fafafa;">
                 <div id="results"></div></div>
               </div>
             </div>
@@ -71,7 +73,7 @@
         <div class="container">
           <div class="container">
             <div class="row">
-              <div class="col-sm-10">
+              <div class="col-sm-10" style="background-color:#f5f8fa;">
                 <p><?php
                 ini_set('display_errors', 1);
                 require_once('TwitterAPIExchange.php');
