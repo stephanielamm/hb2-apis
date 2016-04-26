@@ -43,12 +43,13 @@
 /*Footer*/
 .footer {
   height:40px;
-  background-color:black;
+  background-color:#C0C0C0;
   margin-top:30px;
 }
 
 
 /*Insta/Twitter*/
+
 .btn-sample {
   color: #524B4B;
   background-color: #C0C0C0;
@@ -110,9 +111,14 @@ fieldset[disabled] .btn-sample.active {
 	display: block;
 }
 
+.ig {
+  padding-left:50px;
+}
+
+
 .wrapper{
-  width:400px;
-  height:400px;
+  width:700px;
+  height:700px;
   display:inline;
   float:left;
   overflow:hidden;
@@ -161,7 +167,7 @@ fieldset[disabled] .btn-sample.active {
 }
 
 .ig-prof-mobile {
-  display:none;
+  display:inline;
 }
 
 .instagram-content {
@@ -207,6 +213,7 @@ fieldset[disabled] .btn-sample.active {
   overflow-x: hidden;
   font-size: 12px;
   background-color:white;
+  margin-right:45%;
 
 }
 
@@ -254,6 +261,9 @@ fieldset[disabled] .btn-sample.active {
   font-size: 13px;
 }
 
+.ig-prof-desktop{
+  display:none;
+}
 
 
 
@@ -307,6 +317,16 @@ img.twitter-profilepictures {
 
 }
 
+@media only screen and (max-width: 900px) {
+.instagram-caption-div {
+  padding-top: 20px;
+  overflow-x: hidden;
+  font-size: 12px;
+  background-color:white;
+  margin-right:0;
+
+}
+
 @media only screen and (max-width: 800px) {
   img.twitter-profilepictures {
     border-radius: 10%;
@@ -345,6 +365,10 @@ img.twitter-profilepictures {
     margin-left: 0px;
     margin-bottom: 5px;
 
+  }
+
+  .ig {
+    padding-left:0px;
   }
 
   }
