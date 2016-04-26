@@ -37,9 +37,14 @@
 
 
 
-<div class="container">
-  <div class="row">
-    <h3>Click through the social media streams to see what people have to say about HB2.</h3>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12">
+    <h2>It's become a national conversation.</h2
+    <p>Click through the social media feeds to see what people have to say about House Bill 2.</p>
+  </div>
+</div>
+<div class="row">
     <div class="col-sm-12">
             <button type="button" class="btn btn-secondary btn-lg nav-item insta" style="float:right;">Instagram</button>
             <button type="button" class="btn btn-secondary btn-lg nav-item twitter" style="float:left;">Twitter</button>
@@ -137,18 +142,6 @@
 
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="row footer">
     </div>
