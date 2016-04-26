@@ -46,8 +46,8 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
-            <button type="button" class="btn btn-secondary btn-lg nav-item insta" style="float:right;">Instagram</button>
-            <button type="button" class="btn btn-secondary btn-lg nav-item twitter" style="float:left;">Twitter</button>
+            <button type="button" class="btn btn-secondary btn-lg nav-item insta" style="float:right; margin-right: 50px;">Instagram</button>
+            <button type="button" class="btn btn-secondary btn-lg nav-item twitter" style="float:left; margin-left:50px;">Twitter</button>
       </div>
     </div>
 
