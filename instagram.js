@@ -35,26 +35,49 @@ $(function() {
 
 				insta += '<div class="instagram-loop">'
 
-			 //photo section
+			 //profile row
+			 insta +='<div class="container-fluid">'
 			 insta += '<div class="row">'
-							insta += '<div class="col-md-12 col-lg-6 col-xs-12">'
-							style="url('"+data.images.low_resolution.url+"')";
-							insta += '<a target="_blank" href="'+data.link+'"><div class="wrapper" style="background-image:' + style + '"></div></a>'
-							insta += '<br></a></div>'
+							insta += '<div class="col-sm-12 ig-prof-mobile">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
 							insta += '<img width="30px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
 							insta += '<p class="instagram-username">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
-							insta += '<div class="instagram-caption-div">'
+							style="url('"+data.images.low_resolution.url+"')";
+							insta += '</div>' //ends profile col
+							insta += '</div>' //ends profile row
+
+
+					//photo row
+							insta += '<div class="row">'
+							insta += '<div class="col-sm-12>'
+							insta += '<a target="_blank" href="'+data.link+'"><div class="wrapper" style="background-image:' + style + '"></div></a>' //ends photo col
+							insta += '</a></div>' //end photo row
+
+							//profile row
+							insta += '<div class="row">'
+							insta += '<div class="col-sm-12 ig-prof-desktop">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
+							insta += '<img width="60px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
+							insta += '<p class="instagram-username">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
+							style="url('"+data.images.low_resolution.url+"')";
+							insta += '</div>' //end profile col
+							insta += '</div>'//end profile row
+									//caption row
+							insta += '<div class="row">'
+							insta += '<div class="col-sm-12">'
+							insta += '<div class="instagram-caption-div" style="padding-top:25px">'
 							insta += '<div class="instagram-likes"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
 							insta += '<span class="instagram-username-caption">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span>'
 							insta += '</br><a target="_blank" href="'+data.link+'"><img class="insta-caption-link" src="instalink.png" alt="instalink" style="padding-bottom:30px"> </a>'
-							insta += '</div>' //end photo col
+							insta += '</div>' //end caption col
+						insta += '</div>'//end caption row
 
+						insta += '</div>'//end container fluid
 
-
-						insta += '</div>'//end row
+						insta += '</div>'//end loop
 						insta += '</div>'//end loop
 
 
