@@ -24,9 +24,9 @@
           <ul class="nav navbar-nav navbar-left">
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">In the news</a></li>
-            <li class="active"><a href="twitterinsta.php">See what people are saying</a></li>
-            <li><a href="video.html">Who opposes HB2?</a></li>
-            <li><a href="map.html">Anti-Trans legislation across the country</a></li>
+            <li class="active"><a href="twitterinsta.php">On social media</a></li>
+            <li><a href="video.html">Close to home</a></li>
+            <li><a href="map.html">Across the country</a></li>
           </ul>
       </div>
   </div>
@@ -68,7 +68,7 @@
         <div class="insta-expand">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12" id="ig">
+              <div class="col-sm-12" id="ig" style="background-color:#f5f8fa;">
                 <div id="results"></div></div>
               </div>
             </div>

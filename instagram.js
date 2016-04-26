@@ -33,10 +33,10 @@ $(function() {
 
 			$.each(json.data,function(i,data){
 
+ 				insta += '<div class="container-fluid" style="background-color:white;">'
 				insta += '<div class="instagram-loop">'
 
 			 //profile row
-			 insta +='<div class="container-fluid">'
 			 insta += '<div class="row">'
 							insta += '<div class="col-sm-12 ig-prof-mobile">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
@@ -64,21 +64,18 @@ $(function() {
 							style="url('"+data.images.low_resolution.url+"')";
 							insta += '</div>' //end profile col
 							insta += '</div>'//end profile row
-									//caption row
-							insta += '<div class="row">'
-							insta += '<div class="col-sm-12">'
+							insta += '<div class="col-sm-12" class="wrapper">'
 							insta += '<div class="instagram-caption-div" style="padding-top:25px">'
 							insta += '<div class="instagram-likes"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
 							insta += '<span class="instagram-username-caption">'
 							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span>'
 							insta += '</br><a target="_blank" href="'+data.link+'"><img class="insta-caption-link" src="instalink.png" alt="instalink" style="padding-bottom:30px"> </a>'
 							insta += '</div>' //end caption col
-						insta += '</div>'//end caption row
 
-						insta += '</div>'//end container fluid
-
+						insta += '</div>'
+						insta += '</div>'
 						insta += '</div>'//end loop
-						insta += '</div>'//end loop
+						insta += '</div>'//end container-fluid
 
 
 			});
