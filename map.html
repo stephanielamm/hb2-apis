@@ -37,8 +37,6 @@
   </nav>
 
 
-
-
     <div class="row">
     <div id="map" class="col-xs-12">
     <script>
@@ -52,11 +50,11 @@
        var map;
        var center = {lat: 39.8282, lng: -98.5795};
 
-//points
+//points: all info from http://www.transequality.org/action-center#HI HB 2532//
           var hawaii = {lat:19.8968, lng: -155.58};
           var illinois = {lat:40.6331, lng: -89.3985};
           var indiana = {lat: 40.2672, lng: -86.1349};
-          var kansas = {lat: 39.0119, lng: -98.4842;
+          var kansas = {lat: 39.0119, lng: -98.4842};
           var kentucky = {lat:37.8393, lng: -84.2700};
           var massachusetts = {lat:42.4072, lng: -71.3824};
           var michigan = {lat: 44.3148, lng:-85.6024};
@@ -76,31 +74,35 @@
 
 
            map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 39.8282, lng: -98.5795};,
+                    center: {lat: 39.8282, lng: -98.5795},
                     zoom: 4,
-                    mapTypeId: google.maps.MapTypeId.SATELLITE,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
                     scrollwheel:false
 
                   });
 
 //Hawaii//
       var marker = new google.maps.Marker({
-           position: yavPoint,
+           position: hawaii,
            map: map,
            title: 'Hawaii'
          });
-         var mathString = '<div id="content">'+
+         var hb2181 = '<div id="content">'+
              '<div id="siteNotice">'+
              '</div>'+
-             '<h1 id="firstHeading" class="firstHeading">Mather Point</h1>'+
+             '<h1 id="firstHeading" class="firstHeading">House Bill 2181</h1>'+
              '<div id="bodyContent">'+
-             '<p>Mather Point was named after Stephen Mather, the first director of the National Parks Service.  Looking towards the North Rim, viewers can see for 10 miles across to the other side from Mather Point</p>'+
+             '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to move out of committee.</p>'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading">House Bill 2532</h1>'+
+             '<div id="bodyContent">'+
+             '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to move out of committee.</p>'+
              '</div>'+
              '</div>';
 
      var infowindow = new google.maps.InfoWindow({
-             content: mathString,
-             position: mathPoint,
+             content: hb2181,
+             position: hawaii,
            });
      marker.addListener('click', function() {
          infowindow.open(map, marker);
