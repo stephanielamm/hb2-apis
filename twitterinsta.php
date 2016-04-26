@@ -41,9 +41,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-            <button type="button" class="btn btn-secondary btn-lg nav-item insta" data-toggle="button" aria-pressed="false" autocomplete="off">Instagram</button>
+            <button type="button" class="btn btn-secondary btn-lg nav-item insta">Instagram</button>
           </br></br>
-            <button type="button" class="btn btn-secondary btn-lg nav-item twitter" data-toggle="button" aria-pressed="false" autocomplete="off">Twitter</button>
+            <button type="button" class="btn btn-secondary btn-lg nav-item twitter">Twitter</button>
       </div>
 
       <div class="col-sm-10">
