@@ -78,7 +78,7 @@ fieldset[disabled] .btn-sample,
 .btn-sample[disabled]:hover,
 fieldset[disabled] .btn-sample:hover,
 .btn-sample.disabled:focus,
-.btn-sample[disabled]:focus, 
+.btn-sample[disabled]:focus,
 fieldset[disabled] .btn-sample:focus,
 .btn-sample.disabled:active,
 .btn-sample[disabled]:active,
@@ -248,11 +248,17 @@ fieldset[disabled] .btn-sample.active {
   font-weight: 600;
   font-size: 13px;
 }
+
+
+
+
 /*Tweets*/
 
 img.twitter-profilepictures {
   border-radius: 10%;
   margin: 8px 8px;
+  width: 65%;
+  float: right;
 }
 
 .tweet-info {
@@ -274,15 +280,17 @@ img.twitter-profilepictures {
 
 .tweet {
   margin: 0 0 10px 0;
+  margin-left:4px;
+  font-size:15px;
 }
 
 .twitter-pic {
-    width: 320px;
     vertical-align: middle;
-    margin: 8px 0;
+    margin: 14px 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    width: 65%;
 }
 
 .twitter-header-pic {
@@ -302,5 +310,23 @@ img.twitter-profilepictures {
   }
   .insta-caption-link{
     width: 25%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .wrapper{
+    width:200px;
+    height:200px;
+    display:inline;
+    float:left;
+    overflow:hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom:20px;
+    margin-right:30px;
+  }
   }
 }

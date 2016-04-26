@@ -10,17 +10,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet">
     <link href="bootstrap.min.css" rel="stylesheet">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 10;
-      padding: 10;
-    }
-  </style>
+
 </head>
 
 <body>
-  <img src="header.svg" alt="header" style="width:100%">
+  <img src="header.svg" alt="header" style="width:160%">
 <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
   <div class="container-fluid">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -45,6 +39,7 @@
 
 <div class="container">
   <div class="row">
+    <h3>Click through the social media streams to see what people have to say about HB2.</h3>
     <div class="col-sm-12">
             <button type="button" class="btn btn-secondary btn-lg nav-item insta" style="float:right;">Instagram</button>
             <button type="button" class="btn btn-secondary btn-lg nav-item twitter" style="float:left;">Twitter</button>
@@ -53,34 +48,34 @@
 
 <div class="row">
   <div class="col-sm-2"></div>
-      <div class="col-sm-10">
+      <div class="col-sm-12">
       <div class="home-expand">
         <div class="container">
           <div class="row">
-            <div class="col-sm-10">
-          <p>Click through the social media streams to see what people have to say about HB2.</p>
+            <div class="col-sm-12">
+          <p></p>
         </div>
       </div>
     </div>
   </div>
   </div>
-      <div class="col-sm-10">
+      <div class="col-sm-12">
         <div class="insta-expand">
           <div class="container">
             <div class="row">
-              <div class="col-sm-10" style="background-color:#fafafa;">
+              <div class="col-sm-12">
                 <div id="results"></div></div>
               </div>
             </div>
         </div>
       </div>
 
-      <div class="col-sm-10">
+      <div class="col-sm-12">
       <div class="twitter-expand">
         <div class="container">
           <div class="container">
             <div class="row">
-              <div class="col-sm-10" style="background-color:#f5f8fa;">
+              <div class="col-sm-12" style="background-color:#f5f8fa;">
                 <p><?php
                 ini_set('display_errors', 1);
                 require_once('TwitterAPIExchange.php');
@@ -120,8 +115,8 @@
                 foreach($tweetData['statuses'] as $index => $items)
                 {
                   echo "<div class='row twitter-info'>";
-                  echo "<div class='col-xs-1'><a href='http://twitter.com/" . $items['user']['screen_name'] . "' target='_blank'><img class='twitter-profilepictures' src='" . $items['user']['profile_image_url'] . "'/></a></div>";
-                  echo "<div class='col-xs-9 tweet-info'><span class='twitter-name'>" . $items['user']['name'] . " </span>";
+                  echo "<div class='col-xs-2'><a href='http://twitter.com/" . $items['user']['screen_name'] . "' target='_blank'><img class='twitter-profilepictures' src='" . $items['user']['profile_image_url'] . "'/></a></div>";
+                  echo "<div class='col-xs-10 tweet-info'><span class='twitter-name'>" . $items['user']['name'] . " </span>";
                   echo "<span class='twitter-username'>@" . $items['user']['screen_name'];
                   echo "</span><p class='tweet'>" . $items['text'] . "</p></div></div>";
                   $entitiesArray = $items['entities'];

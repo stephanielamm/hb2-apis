@@ -32,12 +32,8 @@ $(function() {
 			var i = 0;
 
 			$.each(json.data,function(i,data){
-				var date = new Date(data.created_time * 1000);
-				var day = date.getDay();
 
 				insta += '<div class="instagram-loop">'
-
-	//
 
 			 //photo section
 			 insta += '<div class="row">'
@@ -45,26 +41,17 @@ $(function() {
 							style="url('"+data.images.low_resolution.url+"')";
 							insta += '<a target="_blank" href="'+data.link+'"><div class="wrapper" style="background-image:' + style + '"></div></a>'
 							insta += '<br></a></div>'
-							insta += '<div class="instagram-date-div">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
+							insta += '<img width="30px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
+							insta += '<p class="instagram-username">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
+							insta += '<div class="instagram-caption-div">'
+							insta += '<div class="instagram-likes"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
+							insta += '<span class="instagram-username-caption">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span>'
+							insta += '</br><a target="_blank" href="'+data.link+'"><img class="insta-caption-link" src="instalink.png" alt="instalink" style="padding-bottom:30px"> </a>'
+							insta += '</div>' //end photo col
 
-			insta += '</div>' //end photo col
-
-
-
-				//caption section
-				insta += '<div class="col-md-12 col-lg-6 col-xs-12">'
-				insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
-				insta += '<img width="30px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
-				insta += '<p class="instagram-username">'
-				insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
-				insta += '<div class="instagram-caption-div">'
-				insta += '<div class="instagram-likes"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
-				insta += '<span class="instagram-username-caption">'
-				insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span>'
-				insta += '</br><a target="_blank" href="'+data.link+'"><img class="insta-caption-link" src="instalink.png" alt="instalink" style="padding-bottom:30px"> </a>'
-
-			//	insta += '</div>'
-				insta += '</div>'//end caption col
 
 
 						insta += '</div>'//end row
