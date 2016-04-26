@@ -22,7 +22,7 @@ margin-bottom:60px;
 }
 
 .home-expand{
-  display:none;
+  display:block;
 }
 
 .active{
@@ -30,8 +30,8 @@ margin-bottom:60px;
 }
 
 .wrapper{
-  width:500px;
-  height:500px;
+  width:400px;
+  height:400px;
   display:inline;
   float:left;
   overflow:hidden;
@@ -53,12 +53,12 @@ margin-bottom:60px;
 
 
 
-/*.col-xs-6{
+/*.col-sm-10{
   height:80%;
   overflow-y:scroll;
   border-bottom:10px;
   color: grey;
-} */
+}*/
 
 /*Insta*/
 
