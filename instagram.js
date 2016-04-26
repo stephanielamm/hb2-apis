@@ -61,7 +61,7 @@ $(function() {
 				insta += '<div class="instagram-likes"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
 				insta += '<span class="instagram-username-caption">'
 				insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span>'
-				insta += '</br><a target="_blank" href="'+data.link+'"><img class="link" src="instalink.png" alt="instalink" style="width:25%; padding-bottom:30px"> </a>'
+				insta += '</br><a target="_blank" href="'+data.link+'"><img class="insta-caption-link" src="instalink.png" alt="instalink" style="padding-bottom:30px"> </a>'
 
 			//	insta += '</div>'
 				insta += '</div>'//end caption col

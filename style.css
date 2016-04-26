@@ -49,6 +49,51 @@
 
 
 /*Insta/Twitter*/
+.btn-sample {
+  color: #524B4B;
+  background-color: #C0C0C0;
+  border-color: #FFFFFF;
+}
+
+.btn-sample:hover,
+.btn-sample:focus,
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  color: #524B4B;
+  background-color: #F5A9B8;
+  border-color: #FFFFFF;
+}
+
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  background-image: none;
+}
+
+.btn-sample.disabled,
+.btn-sample[disabled],
+fieldset[disabled] .btn-sample,
+.btn-sample.disabled:hover,
+.btn-sample[disabled]:hover,
+fieldset[disabled] .btn-sample:hover,
+.btn-sample.disabled:focus,
+.btn-sample[disabled]:focus, 
+fieldset[disabled] .btn-sample:focus,
+.btn-sample.disabled:active,
+.btn-sample[disabled]:active,
+fieldset[disabled] .btn-sample:active,
+.btn-sample.disabled.active,
+.btn-sample[disabled].active,
+fieldset[disabled] .btn-sample.active {
+  background-color: #C0C0C0;
+  border-color: #FFFFFF;
+}
+
+.btn-sample .badge {
+  color: #C0C0C0;
+  background-color: #524B4B;
+}
 
 
 .home-expand,
@@ -254,5 +299,8 @@ img.twitter-profilepictures {
     border-radius: 10%;
     margin: 8px 8px;
     width:25px;
+  }
+  .insta-caption-link{
+    width: 25%;
   }
 }

@@ -54,7 +54,48 @@
                 });
 
      function initMap() {
-
+       var mapStyle =
+       [
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#FDEBEF"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#cccccc"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dddddd"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#FAD3DC"
+            }
+        ]
+    },
+    {
+        "featureType": "transit"
+    }
+];
        var map;
        var center = {lat: 37.0000, lng: -119.4842};
 
@@ -84,6 +125,7 @@
            map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 37.0000, lng: -119.4842},
                     zoom: 4,
+                    styles: mapStyle,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     scrollwheel:false
 
