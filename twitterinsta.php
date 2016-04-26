@@ -29,7 +29,7 @@
       <li><a href="news.html">In the news</a></li>
       <li class="active"><a href="twitterinsta.php">See what people are saying</a></li>
       <li><a href="video.html">Who opposes HB2?</a></li>
-      <li><a href="map.html">Anti-LGBT legislation across the country</a></li>
+      <li><a href="map.html">Anti-Trans legislation across the country</a></li>
     </ul>
   </div>
 </nav>

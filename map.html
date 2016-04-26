@@ -31,7 +31,7 @@
       <li><a href="news.html">In the news</a></li>
       <li><a href="twitterinsta.php">See what people are saying</a></li>
       <li><a href="video.html">Who opposes HB2?</a></li>
-      <li class="active"><a href="map.html">Anti-LGBT legislation across the country</a></li>
+      <li class="active"><a href="map.html">Anti-Trans legislation across the country</a></li>
     </ul>
   </div>
   </nav>
@@ -68,8 +68,8 @@
           var southDakota = {lat: 43.9695, lng:-99.9018};
           var tennessee = {lat:35.5175, lng: -86.5804};
           var virginia = {lat:37.4316, lng: -78.6569};
-          var washington = {lat: 38.9072, lng: -77.0369};
-          var wisconsin = {lat: 43.7844, lng: -88.7879};
+          var washington = {lat: 47.7511, lng: -120.7401};
+          var wisconsin = {lat: 43.0731, lng: -89.4012};
           var wyoming = {lat:43.0760, lng: -107.2903};
 
 
@@ -132,8 +132,6 @@ var ilinfowindow = new google.maps.InfoWindow({
 ilmarker.addListener('click', function() {
    ilinfowindow.open(map, ilmarker);
    });
-
-
 
 //Indiana//
 var indmarker = new google.maps.Marker({
@@ -341,20 +339,322 @@ var moinfowindow = new google.maps.InfoWindow({
      });
 momarker.addListener('click', function() {
    moinfowindow.open(map, momarker);
-   });
+ });
+
 //northCarolina//
+var ncmarker = new google.maps.Marker({
+     position: northCarolina,
+     map: map,
+     title: 'North Carolina'
+   });
+   var ncInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Require schools and public buildings to segregate facilities according to sex marked on birth certificates. Prohibits local governments from passing ordinances on discrimination in public accommodations. Status: The governor has signed the bill into law.</p>'+
+       '</div>'+
+       '</div>';
+var ncinfowindow = new google.maps.InfoWindow({
+       content: ncInfo,
+       position: northCarolina,
+     });
+ncmarker.addListener('click', function() {
+   ncinfowindow.open(map, ncmarker);
+   });
 //oklahoma//
+var okmarker = new google.maps.Marker({
+     position: oklahoma,
+     map: map,
+     title: 'Oklahoma'
+   });
+   var okInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 1597</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Gives businesses a blank check to discriminate against LGBT people for any reason. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2215</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires marriage applicants to state on their application whether they have had transition-related surgery and have it recorded on their marriage license. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 3049</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use restrooms and locker rooms according to their sex assigned at birth (based on "physical difference" or chromosomes). Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 440</h1>'+
+       '<div id="bodyContent">'+
+       '<p> Creates sweeping exemptions for businesses and organizations to discriminate based on their religious beliefs about "sex, gender or sexual orientation." Statuts: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 1014</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Makes it illegal for people to use restrooms that don’t match their “biological gender.” Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 1323</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires sex-specific student facilities to be segregated according to anatomy at birth, and withholds State Aid funds from schools that have sex-specific facilities and do not respond to a complaint by a parent or student according to the bill requirements. Statuts: Failed to move out of committee.</p>'+
+       '</div>'+
+       '</div>';
+var okinfowindow = new google.maps.InfoWindow({
+       content: okInfo,
+       position: oklahoma,
+     });
+okmarker.addListener('click', function() {
+   okinfowindow.open(map, okmarker);
+   });
 //oregon//
+var ormarker = new google.maps.Marker({
+     position: oregon,
+     map: map,
+     title: 'Oregon'
+   });
+   var orInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 4061</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Status: Inactive.</p>'+
+       '</div>'+
+       '</div>';
+
+
+var orinfowindow = new google.maps.InfoWindow({
+       content: orInfo,
+       position: oregon,
+     });
+ormarker.addListener('click', function() {
+   orinfowindow.open(map, ormarker);
+   });
+
 //southCarolina//
+var scmarker = new google.maps.Marker({
+     position: southCarolina,
+     map: map,
+     title: 'South Carolina'
+   });
+   var scInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 4761</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to participate in sports teams according to the sex marked on their birth certificate. Status: Referred to Committee on Education and Public Works.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 0108</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Denies transgender people in prisons access to medically necessary transition-related care. Status: Introduced but has not moved since last year.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 1203</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires people to use restrooms in schools and other buildings on public property according to their sex assigned at birth and prohibits local governments from adopting different policies. Status: Referred to General Senate Committee. A subcommittee held a hearing on April 13 and 14 and will send the bill to the full committee soon. Watch the powerful testimony from the subcommittee hearing.</p>'+
+       '</div>'+
+       '</div>';
+
+var scinfowindow = new google.maps.InfoWindow({
+       content: scInfo,
+       position: southCarolina,
+     });
+scmarker.addListener('click', function() {
+   scinfowindow.open(map, scmarker);
+   });
 //southDakota//
+var sdmarker = new google.maps.Marker({
+     position: southDakota,
+     map: map,
+     title: 'South Dakota'
+   });
+   var sdInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 1008</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth and requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms.Status: Governor vetoed bill after it passed in the legislature. Legislators in the House failed to override the veto.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 1107</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to move out of commitee in the Senate after passing in the House.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 1112</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Overturns policy by the South Dakota High School Activities Association that required sports team to treat students according to their gender identity, and requires the Association to get consent from the state legislature before adopting any policies related to trans students. Status: Failed to move forward in the Senate after being passed in the House.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 1209</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires schools and other public bodies to accept all the information on birth certificates as valid, including the name and gender listed there. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '</div>';
+
+var sdinfowindow = new google.maps.InfoWindow({
+       content: sdInfo,
+       position: southDakota,
+     });
+sdmarker.addListener('click', function() {
+   sdinfowindow.open(map, sdmarker);
+   });
 //tennessee//
+var tnmarker = new google.maps.Marker({
+     position: tennessee,
+     map: map,
+     title: 'Tennessee'
+   });
+   var tnInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2414</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students in public schools, including public colleges and universities, to use restrooms and locker rooms according to their sex assigned at birth. Status: Sponsor withdrew bill.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2600</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Voids any vital record documents, like marriage licenses and birth certificates, if they have a gender marker that doesn’t match a person’s sex assigned at birth. Status: Failed to move before the legislature adjourned.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 2275</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Voids any vital record documents, like marriage licenses and birth certificates, if they have a gender marker that doesn’t match a person’s sex assigned at birth. Status: Failed to move before the legislature adjourned.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 2387</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students in public schools, including public colleges and universities, to use restrooms and locker rooms according to their sex assigned at birth. Status: Failed to move before the legislature adjourned.</p>'+
+       '</div>'+
+       '</div>';
+
+var tninfowindow = new google.maps.InfoWindow({
+       content: tnInfo,
+       position: tennessee,
+     });
+tnmarker.addListener('click', function() {
+   tninfowindow.open(map, tnmarker);
+   });
 //virginia//
+var vamarker = new google.maps.Marker({
+     position: virginia,
+     map: map,
+     title: 'Virginia'
+   });
+   var vaInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 77</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Says that violations of federal sex discrimination regulations, policies and rules adopted since 2012 are not violations of the Virginia Human Rights Act. This is a clever way of saying that the sex discrimination law in Virginia can’t be interpreted to cover LGBT people, like federal sex discrimination laws have been interpreted to do so by the Obama administration. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 397</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Excludes discrimination based on gender identity from sex discrimination protections under the Human Rights Act. Forbids local governments and school districts from adopting more protective sex discrimination policies. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 431</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Takes away trans’ people ability to change the gender on their birth certificates. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 663</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth and imposes a fine for violation. Requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 781</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth and imposes a fine for violation. Requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Bill defeated in committee.</p>'+
+       '</div>'+
+       '</div>';
+
+var vainfowindow = new google.maps.InfoWindow({
+       content: vaInfo,
+       position: virginia,
+     });
+vamarker.addListener('click', function() {
+   vainfowindow.open(map, vamarker);
+   });
 //washington//
+var wamarker = new google.maps.Marker({
+     position: washington,
+     map: map,
+     title: 'Washington'
+   });
+   var waInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2589</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Amends the state’s nondiscrimination law to away trans’ people ability to use single-sex facilities according to gender identity. Allows private and public entities to bar people from single-sex facilities based on their anatomy. Status: Failed to meet deadline for introducing new bills.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2782</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Amends the state’s nondiscrimination law to say that it does not give people the right to use facilities that are inconsistent with their anatomy or DNA. Status: Failed to move out of committee.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2935</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Repeals a regulation that allows trans people to access facilities according to their gender identity and forbids the Washington Human Rights Commission from making any more regulations about access to single-sex facilities. Status: Failed to move forward.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 2941</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use restrooms according to sex assigned at birth. Status: Failed to move forward.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 6443</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Repeals a regulation that allows trans people to access facilities according to their gender identity and forbids the Washington Human Rights Commission from making any more regulations about access to single-sex facilities. Status: Defeated on the Senate floor.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 6584</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Amends the state’s nondiscrimination law to away trans’ people ability to use single-sex facilities according to gender identity. Allows private and public entities to bar people from single-sex facilities based on their anatomy. Status: Failed to move out of Senate Rules committee.</p>'+
+       '</div>'+
+       '</div>';
+
+var wainfowindow = new google.maps.InfoWindow({
+       content: waInfo,
+       position: washington,
+     });
+wamarker.addListener('click', function() {
+   wainfowindow.open(map, wamarker);
+   });
 //wisconsin//
+var wimarker = new google.maps.Marker({
+     position: wisconsin,
+     map: map,
+     title: 'Wisconsin'
+   });
+   var wiInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Assembly Bill 469</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth, and requires schools to segregate all multi-user facilities by sex. Creates restrictions on when trans students can use single-user restrooms. Status: Failed to move forward.</p>'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">Senate Bill 582</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Requires students to use single-sex facilities (like restrooms and changing rooms) according to their sex assigned at birth. Status: Failed to move forward.</p>'+
+       '</div>'+
+       '</div>';
+
+var wiinfowindow = new google.maps.InfoWindow({
+       content: wiInfo,
+       position: wisconsin,
+     });
+wimarker.addListener('click', function() {
+   wiinfowindow.open(map, wimarker);
+   });
+
+
 //wyoming//
+var wymarker = new google.maps.Marker({
+     position: wyoming,
+     map: map,
+     title: 'Wyoming'
+   });
+   var wyInfo = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>'+
+       '<h1 id="firstHeading" class="firstHeading">House Bill 98</h1>'+
+       '<div id="bodyContent">'+
+       '<p>Creates sweeping exemptions allowing people and businesses to discriminate against transgender people and same-sex couples based on their religious or moral beliefs. Status: Failed to meet deadline for introducing new bills.</p>'+
+       '</div>'+
+       '</div>';
 
-
-
+var wyinfowindow = new google.maps.InfoWindow({
+       content: wyInfo,
+       position: wyoming,
+     });
+wymarker.addListener('click', function() {
+   wyinfowindow.open(map, wymarker);
+   });
 
       }
     </script>

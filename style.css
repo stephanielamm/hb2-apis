@@ -86,6 +86,7 @@ margin-bottom:60px;
   max-width: 400px;
   margin: 10 auto;
   display: block;
+  background-color:white;
 }
 
 .instagram-profilepictures {
@@ -93,6 +94,7 @@ margin-bottom:60px;
   display: inline;
   float: left;
   margin-left: 5px;
+
 }
 
 .instagram-username a {
@@ -102,22 +104,26 @@ margin-bottom:60px;
   font-size: 12px;
   padding-left:5px;
   color: #2E5E86;
+
 }
 
 .instagram-username-div {
   margin-top: 8px;
   margin-right: 5px;
   display: inline
+
 }
 
 .instagram-date-div {
   margin-top: -6px;
+
 }
 
 .instagram-caption-div {
   margin-top: 20px;
   overflow-x: hidden;
   font-size: 12px;
+  background-color:white;
 }
 
 .instagram-username-caption a {
