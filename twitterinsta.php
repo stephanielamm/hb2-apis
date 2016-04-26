@@ -19,20 +19,24 @@
 </head>
 
 <body>
-
+  <img src="header.svg" alt="header" style="width:100%">
+<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
   <div class="container-fluid">
-  <h1>An exploration of N.C. House Bill 2</h1>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="news.html">In the news</a></li>
-      <li class="active"><a href="twitterinsta.php">See what people are saying</a></li>
-      <li><a href="video.html">Who opposes HB2?</a></li>
-      <li><a href="map.html">Anti-Trans legislation across the country</a></li>
-    </ul>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">In the news</a></li>
+            <li class="active"><a href="twitterinsta.php">See what people are saying</a></li>
+            <li><a href="video.html">Who opposes HB2?</a></li>
+            <li><a href="map.html">Anti-Trans legislation across the country</a></li>
+          </ul>
+      </div>
   </div>
-</nav>
+</div>
+
 
 
 
@@ -40,12 +44,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-2">
-            <button type="button" class="btn btn-secondary btn-lg nav-item insta">Instagram</button>
-          </br></br>
-            <button type="button" class="btn btn-secondary btn-lg nav-item twitter">Twitter</button>
+    <div class="col-sm-12">
+            <button type="button" class="btn btn-secondary btn-lg nav-item insta" style="float:right;">Instagram</button>
+            <button type="button" class="btn btn-secondary btn-lg nav-item twitter" style="float:left;">Twitter</button>
       </div>
+    </div>
 
+<div class="row">
+  <div class="col-sm-2"></div>
       <div class="col-sm-10">
       <div class="home-expand">
         <div class="container">

@@ -1,9 +1,43 @@
 
 /*Header*/
-.header {
-height:60px;
-background-color:black;
-margin-bottom:60px;
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(26, 25, 25, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 20px;
+    background-color: rgba(199, 199, 199, 1);
+    border-width: 1px;
+    border-radius: 6px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(51, 46, 46, 1);
+    background-color: rgba(199, 199, 199, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(245, 169, 184, 1);
+    background-color: rgba(199, 199, 199, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(245, 169, 184, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #c7c7c7;
 }
 
 /*Footer*/
