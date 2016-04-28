@@ -3,7 +3,7 @@
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>TWITTERINSTA</title>
+<title>An exploration of N.C. House Bill 2</title>
   <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
   <script src="instagram.js" type="text/javascript"></script>
   <link href="bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,7 @@
           <ul class="nav navbar-nav navbar-left">
             <li><a href="index.html">In short</a></li>
             <li class="active"><a href="twitterinsta.php">On social media</a></li>
+            <li><a href="schools.html">In our schools</a></li>
             <li><a href="video.html">Close to home</a></li>
             <li><a href="map.html">Across the country</a></li>
           </ul>
