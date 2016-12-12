@@ -159,5 +159,7 @@
           <script type="text/javascript" src="tabletop.js"></script>
 
 </body>
-
+<footer>
+  <div class="footer"></div>
+</footer>
 </html>
