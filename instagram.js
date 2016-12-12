@@ -3,14 +3,14 @@
 
 //Use this url below to get your access token
 //https://instagram.com/oauth/authorize/?display=touch&client_id=1305ecaf399a47aa9941e7cfb970e8ae&redirect_uri=http://steventking.com/apps/instagram&response_type=token
-
+//https://api.instagram.com/oauth/authorize/?client_id=1305ecaf399a47aa9941e7cfb970e8ae&redirect_uri=http://steventking.com/apps/instagram&response_type=code&scope=public_scope
 //if you need a user id for yourself or someone else use:
 //http://jelled.com/instagram/lookup-user-id
 
 
 $(function() {
 
-	var tag= "wearenotthis";
+	var tag= "hb2";
 
 	var apiurl = "https://api.instagram.com/v1/tags/"+tag+"/media/recent?access_token=248660894.aee21ef.0cb44e17e81547ef994d0de5ff989bbc&callback=?"
 	var access_token = location.hash.split('=')[1];

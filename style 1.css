@@ -1,0 +1,376 @@
+
+/*Header*/
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(26, 25, 25, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 20px;
+    background-color: rgba(199, 199, 199, 1);
+    border-width: 1px;
+    border-radius: 6px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(51, 46, 46, 1);
+    background-color: rgba(199, 199, 199, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(245, 169, 184, 1);
+    background-color: rgba(199, 199, 199, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(245, 169, 184, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #c7c7c7;
+}
+
+/*Footer*/
+.footer {
+  height:40px;
+  background-color:#C0C0C0;
+  margin-top:30px;
+}
+
+
+/*Insta/Twitter*/
+
+.btn-sample {
+  color: #524B4B;
+  background-color: #C0C0C0;
+  border-color: #FFFFFF;
+}
+
+.btn-sample:hover,
+.btn-sample:focus,
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  color: #524B4B;
+  background-color: #F5A9B8;
+  border-color: #FFFFFF;
+}
+
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  background-image: none;
+}
+
+.btn-sample.disabled,
+.btn-sample[disabled],
+fieldset[disabled] .btn-sample,
+.btn-sample.disabled:hover,
+.btn-sample[disabled]:hover,
+fieldset[disabled] .btn-sample:hover,
+.btn-sample.disabled:focus,
+.btn-sample[disabled]:focus,
+fieldset[disabled] .btn-sample:focus,
+.btn-sample.disabled:active,
+.btn-sample[disabled]:active,
+fieldset[disabled] .btn-sample:active,
+.btn-sample.disabled.active,
+.btn-sample[disabled].active,
+fieldset[disabled] .btn-sample.active {
+  background-color: #C0C0C0;
+  border-color: #FFFFFF;
+}
+
+.btn-sample .badge {
+  color: #C0C0C0;
+  background-color: #524B4B;
+}
+
+
+.home-expand,
+.insta-expand,
+.twitter-expand{
+	display: none;
+}
+
+.home-expand{
+  display:block;
+}
+
+.active{
+	display: block;
+}
+
+.ig {
+  padding-left:50px;
+}
+
+
+.wrapper{
+  width:700px;
+  height:700px;
+  display:inline;
+  float:left;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom:20px;
+  margin-right:30px;
+}
+
+
+
+.wrapper img {
+  width:95%;
+}
+
+
+
+/*.col-sm-10{
+  height:80%;
+  overflow-y:scroll;
+  border-bottom:10px;
+  color: grey;
+}*/
+
+/*Insta*/
+
+#instagram, #instagram-blm {
+  max-width: 400px;
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: none;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px #2E5E86;
+  border-left: 1px #2E5E86;
+  border-bottom: 1px #2E5E86;
+  float: right;
+}
+
+#instagram, #instagram-blm, #twitter-blm{
+  margin-bottom: 25px;
+}
+
+.ig-prof-mobile {
+  display:inline;
+}
+
+.instagram-content {
+  display:inline;
+  max-width: 400px;
+  margin: 10 auto;
+  display: block;
+}
+
+.instagram-profilepictures {
+  border-radius: 50%;
+  display: inline;
+  float: left;
+  margin-left: 0px;
+  margin-bottom: 5px;
+
+}
+
+.instagram-username a {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding-left:5px;
+  color: #2E5E86;
+
+}
+
+.instagram-username-div {
+  margin-top: 8px;
+  margin-right: 5px;
+  display: inline
+
+}
+
+.instagram-date-div {
+  margin-top: -6px;
+
+}
+
+.instagram-caption-div {
+  padding-top: 20px;
+  overflow-x: hidden;
+  font-size: 12px;
+  background-color:white;
+  margin-right:45%;
+
+}
+
+.instagram-username-caption a {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  margin-right: 5px;
+  color: #2E5E86;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.instagram-image {
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.instagram-loop {
+  margin: 8px 0 25px 0;
+}
+
+.instagram-caption {
+  margin: 0 10px 10px 10px;
+}
+
+.instagram-likes {
+  margin: 3px 2px;
+}
+
+
+
+.likes {
+  display: inline-block;
+  padding-left: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+.likes-number {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.ig-prof-desktop{
+  display:none;
+}
+
+
+
+/*Tweets*/
+
+img.twitter-profilepictures {
+  border-radius: 10%;
+  margin: 8px 8px;
+  width: 65%;
+  float: right;
+}
+
+.tweet-info {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 12px;
+}
+
+.twitter-name {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.twitter-username {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.tweet {
+  margin: 0 0 10px 0;
+  margin-left:4px;
+  font-size:15px;
+}
+
+.twitter-pic {
+    vertical-align: middle;
+    margin: 14px 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 65%;
+}
+
+.twitter-header-pic {
+  height: 28px;
+  width: 30px;
+  margin: 0 auto;
+  display: block;
+  vertical-align: middle;
+
+}
+
+@media only screen and (max-width: 900px) {
+.instagram-caption-div {
+  padding-top: 20px;
+  overflow-x: hidden;
+  font-size: 12px;
+  background-color:white;
+  margin-right:0;
+
+}
+
+@media only screen and (max-width: 800px) {
+  img.twitter-profilepictures {
+    border-radius: 10%;
+    margin: 8px 8px;
+    width:25px;
+  }
+
+}
+@media only screen and (max-width: 700px) {
+  .wrapper{
+    width: 285px;
+    height: 285px;
+    display:inline;
+    float:left;
+    overflow:hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom:20px;
+    margin-right:30px;
+    background-color: white;
+  }
+
+  .ig-prof-mobile{
+    display:block;
+  }
+  .ig-prof-desktop{
+    display:none;
+  }
+  .instagram-profilepictures {
+    border-radius: 50%;
+    display: inline;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 5px;
+
+  }
+
+  .ig {
+    padding-left:0px;
+  }
+
+  }
+}
