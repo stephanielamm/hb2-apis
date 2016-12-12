@@ -1,6 +1,31 @@
 
+/*media queries*/
+@media screen and (max-width: 900px) {
+  .padded {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .headtxt {
+  font-size: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #F5A9B8;
 
+  }
+
+  .subtxt {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #5BCEFA;
+  }
+}
 /*padding*/
+@media screen and (min-width: 901px){
 .padded {
   padding-left: 50px;
   padding-right: 50px;
@@ -24,6 +49,7 @@ color: #F5A9B8;
   padding-left: 50px;
   padding-right: 50px;
   color: #5BCEFA;
+}
 }
 
 #custom-bootstrap-menu.navbar-default .navbar-brand {
