@@ -2,8 +2,8 @@
 
 /*padding*/
 .padded {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .body {
@@ -63,6 +63,11 @@ color: #F5A9B8;
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #c7c7c7;
+}
+
+.navbar-collapse {
+  padding-right: 25px;
+  padding-left: 35px;
 }
 
 /*Footer*/
