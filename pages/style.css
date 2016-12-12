@@ -67,7 +67,7 @@ color: #F5A9B8;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(245, 169, 184, 1);
+    color: rgba(255,255,255, 1);
     background-color: rgba(199, 199, 199, 1);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
@@ -101,6 +101,12 @@ color: #F5A9B8;
   height:40px;
   background-color:#C0C0C0;
   margin-top:30px;
+}
+
+.footertxt {
+  font-size: 10px;
+  text-align: center;
+  padding-top: 3px;
 }
 
 
