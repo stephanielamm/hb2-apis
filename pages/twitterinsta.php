@@ -56,7 +56,7 @@
   <div class="col-sm-2"></div>
       <div class="col-sm-12">
       <div class="home-expand">
-        <div class="container padded">
+        <div class="container-fluid padded">
           <div class="row">
             <div class="col-sm-12">
           <p></p>
@@ -78,8 +78,8 @@
 
       <div class="col-sm-12">
       <div class="twitter-expand">
-        <div class="container">
-          <div class="container">
+        <div class="container-fluid">
+          <div class="container-fluid">
             <div class="row">
               <div class="col-sm-12" style="background-color:#f5f8fa;">
                 <p><?php
